@@ -1,13 +1,13 @@
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import "./Project.css";
-import projects from "../../../src/Projects.json";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import "./Projects.css";
+import projects from "../../../../Projects.json";
 import { FiGithub } from "react-icons/fi";
-import { HiOutlineExternalLink } from "react-icons/hi"
-
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 const ProjectCard = ({
-  project: { title, description, image, github, live, tags },index
+  project: { title, description, github, live, tags },
+  index,
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -16,19 +16,21 @@ const ProjectCard = ({
     <motion.div
       ref={ref}
       className="project-card-wrapper"
-      initial={{ opacity: 0}}
-      animate={isInView ? { opacity: 1} : {}}
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.6, delay: index * 0.2 }}
     >
       <div className="project-card">
-        <h1>{title}</h1>
-        <p>{description}</p>
-        <section id="tags-section">
-          {tags.map((tag, index) => (
-            <div key={index} className="tag">
-              {tag}
-            </div>
-          ))}
+        <section>
+          <h1>{title}</h1>
+          <p>{description}</p>
+          <section id="tags-section">
+            {tags.map((tag, index) => (
+              <div key={index} className="tag">
+                {tag}
+              </div>
+            ))}
+          </section>
         </section>
         <section className="card-actions">
           <a
@@ -55,22 +57,21 @@ const ProjectCard = ({
   );
 };
 
-const Project = () => {
-
+const Projects = () => {
   return (
-    <div id="projects" className="home-sections">
+    <section id="projects">
       <header>
-        <h1>
-          <span>{"<"}</span>Projects<span>{" />"}</span>
-        </h1>
+        <h1>Projects</h1>
       </header>
       <main id="projects-content">
-        {projects.map((project,index) => {
-          return <ProjectCard key={project.id} index={index} project={project} />;
+        {projects.map((project, index) => {
+          return (
+            <ProjectCard key={project.id} index={index} project={project} />
+          );
         })}
       </main>
-    </div>
+    </section>
   );
 };
 
-export default Project;
+export default Projects;

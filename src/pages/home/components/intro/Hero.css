@@ -1,0 +1,124 @@
+#hero{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 768px;
+  margin: 2rem auto;
+  text-align: center;
+  
+}
+#open-to-work {
+  margin: auto;
+  color: rgb(196, 196, 196);
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  gap: 1rem;
+  position: relative;
+  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.137);
+  
+}
+#open-to-work #green-light {
+  display: flex;
+  align-items: center;
+  height: 0.8rem;
+  width: 0.8rem;
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  border-radius: 0.4rem;
+  animation: light-animation 0.5s ease-in-out 0s infinite alternate forwards;
+}
+#open-to-work #open-to-work-text {
+  position: relative;
+  left: 1.25rem;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#short-intro {
+  font-size: 3rem;
+  color: var(--primary-text);
+  font-weight: 500;
+  line-height: 1.1;
+  ;
+}
+#short-intro span {
+  color: var(--theme-color);
+}
+#long-intro {
+  color: var(--secondary-text);
+  font-size: 1.2rem;
+  letter-spacing: 0.6px;
+  text-wrap: pretty;
+  
+}
+@keyframes light-animation {
+  0% {
+    background-color: rgb(56, 56, 56);
+  }
+
+  100% {
+    background-color: rgb(94, 255, 31);
+    box-shadow: rgba(145, 255, 0, 0.596) 0px 0px 10px 4px,
+      rgba(145, 255, 0, 0.596) 0px 0px 10px 4px;
+  }
+}
+
+.hero-actions {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 1rem;
+}
+.hero-actions button, .hero-actions a {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 0.3rem;
+  position: relative;
+  color: var(--primary-text);
+  transition: 0.2s ease-in-out;
+  &:hover {
+    filter: brightness(120%);
+  }
+}
+
+#npx-button {
+  color: black;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  background-color: #4b4b4b;
+  color: var(--primary-text);
+}
+
+#github-button {
+  background: #4b4b4b;
+}
+
+#linkedin-button {
+  background-color: #3ecf8e86;
+}
+
+@media screen and (max-width: 540px) {
+  #intro{
+    text-align: left;
+  }
+  .hero-actions{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-actions button{
+    width: 100%;
+    
+  }
+  #npx-button{
+    grid-column: span 2;
+  }
+}

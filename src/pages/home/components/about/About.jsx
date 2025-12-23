@@ -2,11 +2,13 @@ import React from "react";
 import "./About.css";
 const About = () => {
   return (
-    <main id="about" className="home-sections">
+    <section id="about">
       <header>
-      <h1><span>{"<"}</span>About<span>{" />"}</span></h1>
+        <h1>
+          About
+        </h1>
       </header>
-      <div id="about-content">
+      <main id="about-content">
         I'm a dedicated software developer with a strong foundation in
         full-stack web development <br />
         <br />
@@ -25,8 +27,8 @@ const About = () => {
         complex challenges and contributing to impactful projects. I'm always
         eager to learn and grow, leveraging my skills to drive innovation and
         deliver high quality software solutions.
-      </div>
-    </main>
+      </main>
+    </section>
   );
 };
 

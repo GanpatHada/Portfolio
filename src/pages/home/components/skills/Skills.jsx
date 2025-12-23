@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Skills.css";
-import { skillsList } from "../../utils/SkillsUtils";
+import { skillsList } from "../../../../utils/SkillsUtils";
 import { IoContract, IoExpand } from "react-icons/io5";
 
 const SkillDetails = ({ skill }) => {
@@ -87,17 +87,17 @@ const Skills = () => {
   const [skill, setSkill] = useState(null);
   const [expended,setExpended]=useState(false)
   return (
-    <div id="skills" className="home-sections">
+    <section id="skills">
       <header>
         <h1>
-          <span>{"<"}</span>Skills<span>{" />"}</span>
+          Skills
         </h1>
       </header>
-      <div id="skills-content">
+      <main id="skills-content">
         <SkillHeader expended={expended} setExpended={setExpended} />
         {expended ? <ExpandedSkills />:<ContractedSkills skill={skill} setSkill={setSkill} />}
-      </div>
-    </div>
+      </main>
+    </section>
   );
 };
 

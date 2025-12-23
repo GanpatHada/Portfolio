@@ -1,5 +1,4 @@
 import "./App.css";
-import Navbar from "./components/navbar/Navbar";
 import Alert from "./components/alert/Alert";
 import {useEffect, useState } from "react";
 import "aos/dist/aos.css";
@@ -36,17 +35,17 @@ const App = () => {
   return (
     <main>
       <Alert />
+      <Header/> 
       <div id="scroll-progress-track">
         <span id="scroll-progress" style={{ width: `${progress}%` }} />
-      </div>
-      <Header/>
-      <Navbar />
-      
+      </div> 
       <div id="content">
-        <Routes>
+        <main>
+          <Routes>
                  <Route path="/spotify" element={<Spotify />} />
                  <Route path="/" element={<Home />} />
         </Routes>
+        </main>
       </div>
     </main>
   );

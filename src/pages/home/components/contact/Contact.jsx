@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import { toast } from "react-toastify";
-import { sendMessage } from "../../services/ContactService";
+import { sendMessage } from "../../../../services/ContactService";
 import {
   checkEmptyFields,
-  checkValidEmail,
-  initialMessage,
-} from "../../utils/ContactUtils";
+  initialMessage
+} from "../../../../utils/ContactUtils"
 import {
   FaGithub,
   FaInstagram,
@@ -29,7 +28,7 @@ const ContactForm = () => {
   };
 
   const handleSendMessage = async () => {
-    let areFieldsEmpty = checkEmptyFields(message);
+    let areFieldsEmpty = checkEmptyFields (message);
     if (areFieldsEmpty) return toast.warning("required* fields are mandatory");
     let emailVerified = checkValidEmail(message.clientEmail);
     if (!emailVerified) return toast.warning("Invalid email");
@@ -216,18 +215,18 @@ const ContactInfo = () => {
 
 const Contact = () => {
   return (
-    <div id="contact" className="home-sections">
+    <section id="contact" >
       <header>
         <h1>
-          <span>{"<"}</span>Contact<span>{" />"}</span>
+          Contact
         </h1>
       </header>
-      <div id="contact-content">
+      <main id="contact-content">
         <ContactDisclaimer />
         <ContactInfo />
         <ContactForm />
-      </div>
-    </div>
+      </main>
+    </section>
   );
 };
 

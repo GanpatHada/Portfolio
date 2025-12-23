@@ -1,17 +1,21 @@
 main{
   display: flex;
   flex-direction: column;
-  height: 100%;
-  
+  height: 100%; 
 }
 #content{
-  background-color: black;
-  flex: 1;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; 
-  overflow: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(4rem + 1px);
   scroll-behavior: smooth;
+}
+#content > main{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.5rem;
+  padding-bottom: 4rem;
 }
 #content::-webkit-scrollbar{
   display: none;
@@ -22,13 +26,7 @@ main{
   border: none;
   margin: 4rem 0rem;
 }
-#content >*{
-  margin: auto;
-  max-width: 1500px;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;  
-}
+
 #scroll-progress-track{
   height: 1px;
   background-color: rgb(56, 56, 56);
@@ -46,9 +44,4 @@ main{
   background:linear-gradient(to right,#00ac5e,rgb(183, 255, 221));
   z-index: 2;
 
-}
-@media screen and (max-width: 540px){
-  .main-saperator{
-    margin: 2rem 0rem;
-  }
 }

@@ -1,25 +1,22 @@
-
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   list-style: none;
-  
 }
 :root {
-  --primary-color:#3ecf8e;
+  --theme-color: #3ecf8e;
   --card-bg-color: rgb(26, 26, 26);
   --card-border-color: rgba(128, 128, 128, 0.349);
-  --primary-text: rgb(192, 192, 192);
-  --secondary-text: rgb(124, 124, 124);
+  --secondary-text: #a1a4a5;
+  --primary-text:whitesmoke;
 }
-html{
-  scroll-behavior: smooth;
-}
+
 body {
   min-height: 100vh;
   background-color: black;
-  font-family: "Roboto", "Lato", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Roboto", "Lato", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -28,26 +25,54 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  
 }
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
-}
-.primary-button{
-  padding: 0.5rem 1rem;
-  background-color: #3ecf8e86;
-  box-shadow: 0 0 0px 1px #c7ffe694;
-  color: whitesmoke;
-  border-radius:0.3rem;
-  &:hover{
-    filter: brightness(1.2);
-    color: white;
-  }
 }
 
 #root {
   height: 100%;
-  
 }
 
 
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* ===============================
+   Medium Laptop (1200px ↓)
+   =============================== */
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* ===============================
+   Tablet (768px ↓)
+   =============================== */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* ===============================
+   Large Mobile (540px ↓)
+   =============================== */
+@media screen and (max-width: 540px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+/* ===============================
+   Small Mobile (360px ↓)
+   =============================== */
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 12px;
+  }
+}
