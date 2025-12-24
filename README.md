@@ -4,12 +4,12 @@ Welcome, 👏Here is my [Portfolio](https://ganpathada22.netlify.app)
 
 ## 🖼 Portfolio preview (Desktop/Laptop)
 
-<img src="./src/assets/app_screen.png" alt="Portfolio preview" />
+<div align="center" style="display:flex; gap:10px; align-items:flex-start;">
 
-## 🖼 Portfolio preview (Mobile)
+  <img src="./src/assets/demo.gif" height="350" alt="Desktop preview"/>
 
-<div align="center">
-  <img src="./src/assets/mobile_screen.png" alt="Portfolio preview" width="300" />
+  <img src="./src/assets/demo_mobile.gif" height="350" alt="Mobile preview"/>
+
 </div>
 
 ## 🚀 Features
@@ -19,6 +19,7 @@ Welcome, 👏Here is my [Portfolio](https://ganpathada22.netlify.app)
 - **Skills Section**: Lists my technical skills and areas of expertise.
 - **Contact Form**: Allows visitors to get in touch directly through the website.
 - **Smooth Animations**: Provides an engaging user experience with animations and transitions.
+- **Spotify route**: Give information about my spotify activity.
 
 ---
 
