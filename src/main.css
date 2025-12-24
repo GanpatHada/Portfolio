@@ -41,38 +41,10 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===============================
-   Medium Laptop (1200px ↓)
-   =============================== */
-@media screen and (max-width: 1200px) {
-  html {
-    font-size: 15px;
-  }
-}
-
-/* ===============================
-   Tablet (768px ↓)
-   =============================== */
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-/* ===============================
-   Large Mobile (540px ↓)
-   =============================== */
 @media screen and (max-width: 540px) {
   html {
     font-size: 13px;
   }
 }
 
-/* ===============================
-   Small Mobile (360px ↓)
-   =============================== */
-@media screen and (max-width: 360px) {
-  html {
-    font-size: 12px;
-  }
-}
+

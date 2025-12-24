@@ -25,16 +25,7 @@ const Navs = () => {
           </a>
         </li>
 
-        <li>
-          <a
-            href="https://ganpathada.hashnode.dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="nav-item all-centered"
-          >
-            Blogs
-          </a>
-        </li>
+        
 
         <li>
           <a href="/#contact" className="nav-item all-centered">

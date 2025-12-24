@@ -10,7 +10,7 @@
   padding: 1rem;
   background-color: black;
   z-index: 10;
-  height: 4rem;
+  height: 60px;
 }
 #main-header > section {
   display: flex;
@@ -58,11 +58,11 @@ section.resume button {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   background-color: #474747;
   color: white;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.85rem;
+  width: 1.85rem;
   margin-left: 0.25rem;
   &:hover {
     background-color: rgb(95, 95, 95);
@@ -88,19 +88,8 @@ section.resume button {
   color: #ffffff;
 }
 
-@media screen and (max-width: 768px) {
-  .nav-list {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    background-color: black;
-    z-index: 10;
-    padding: 1rem;
-    justify-content: space-between;
-    overflow-x: auto;
-  }
-  #main-logo h4{
+@media screen and (max-width: 746px) {
+  .nav-list{
     display: none;
   }
 }

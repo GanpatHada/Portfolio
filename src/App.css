@@ -1,21 +1,23 @@
-main{
+#app {
   display: flex;
   flex-direction: column;
-  height: 100%; 
 }
 #content{
   position: absolute;
   left: 0;
   right: 0;
-  top: calc(4rem + 1px);
+  top: 61px;
+  height: fit-content;
   scroll-behavior: smooth;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
 }
 #content > main{
   width: 100%;
   max-width: 1200px;
   margin: auto;
   padding: 1.5rem;
-  padding-bottom: 4rem;
 }
 #content::-webkit-scrollbar{
   display: none;
@@ -44,4 +46,9 @@ main{
   background:linear-gradient(to right,#00ac5e,rgb(183, 255, 221));
   z-index: 2;
 
+}
+@media screen and (max-width: 746px) {
+  #content{
+    padding-bottom: calc(62px + 1rem);
+  }
 }
