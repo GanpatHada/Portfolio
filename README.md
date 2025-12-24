@@ -1,30 +1,40 @@
-# Portfolio website
+# Portfolio Website
 
-Welcome, 👏Here is my [Portfolio](https://ganpathada22.netlify.app)
+Welcome 👋  
+Here is my live portfolio:  
+🔗 https://ganpathada22.netlify.app
 
-## 🖼 Portfolio preview (Desktop/Laptop)
+---
 
-<div align="center" style="display:flex; gap:10px; align-items:flex-start;">
+## 🖥️ Portfolio Preview – Desktop / Laptop
 
-  <img src="./src/assets/demo.gif" height="350" alt="Desktop preview"/>
+<p align="left">
+  <img src="./src/assets/demo.gif" alt="Desktop preview" width="700"/>
+</p>
 
-  <img src="./src/assets/demo_mobile.gif" height="350" alt="Mobile preview"/>
+---
 
-</div>
+## 📱 Portfolio Preview – Mobile
+
+<p align="left">
+  <img src="./src/assets/demo_mobile.gif" alt="Mobile preview" width="300"/>
+</p>
+
+---
 
 ## 🚀 Features
 
-- **Responsive Design**: Works seamlessly on desktops, tablets, and mobile devices.
-- **Projects Showcase**: Highlights my key projects with descriptions and live previews.
-- **Skills Section**: Lists my technical skills and areas of expertise.
-- **Contact Form**: Allows visitors to get in touch directly through the website.
-- **Smooth Animations**: Provides an engaging user experience with animations and transitions.
-- **Spotify route**: Give information about my spotify activity.
+- **Responsive Design** – Optimized for desktop, tablet, and mobile
+- **Projects Showcase** – Live demos with descriptions
+- **Skills Section** – Clear tech stack visibility
+- **Contact Form** – Easy reach-out for recruiters
+- **Smooth Animations** – Polished user experience
+- **Spotify Route** – Displays real-time Spotify activity
 
 ---
 
 ## 🛠️ Built With
 
-- **Frontend**: React.js
-- **Deployment**: [Vercel](https://vercel.com/)
-- **Version Control**: Git, GitHub
+- **Frontend**: React.js  
+- **Deployment**: Vercel  
+- **Version Control**: Git & GitHub
