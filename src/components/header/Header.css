@@ -89,7 +89,7 @@ section.resume button {
 }
 
 @media screen and (max-width: 746px) {
-  .nav-list{
+  .nav-list {
     display: none;
   }
 }

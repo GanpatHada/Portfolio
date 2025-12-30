@@ -6,7 +6,13 @@
     "image": "/images/globeshare_bg.svg",
     "github": "https://github.com/GanpatHada/globeshare",
     "live": "https://globeshare.vercel.app/",
-    "tags": ["React", "Firebase", "Firestore", "Firebase Auth", "Firebase Storage"]
+    "tags": [
+      "React",
+      "Firebase",
+      "Firestore",
+      "Firebase Auth",
+      "Firebase Storage"
+    ]
   },
   {
     "id": 1,
@@ -24,7 +30,14 @@
     "image": "/images/artstore_bg.jpg",
     "github": "https://github.com/GanpatHada/Committask",
     "live": "https://committask.vercel.app",
-    "tags": ["Next.js", "NextAuth", "PostgreSQL", "Redux", "Tailwind CSS", "TypeScript"]
+    "tags": [
+      "Next.js",
+      "NextAuth",
+      "PostgreSQL",
+      "Redux",
+      "Tailwind CSS",
+      "TypeScript"
+    ]
   },
   {
     "id": 4,
@@ -33,6 +46,14 @@
     "image": "/images/artstore_bg.jpg",
     "github": "https://github.com/GanpatHada/vidzora",
     "live": "https://vidzora.vercel.app",
-    "tags": ["React", "Brevo", "Pixabay API", "Supabase", "Material UI", "Tailwind CSS", "TypeScript"]
+    "tags": [
+      "React",
+      "Brevo",
+      "Pixabay API",
+      "Supabase",
+      "Material UI",
+      "Tailwind CSS",
+      "TypeScript"
+    ]
   }
 ]

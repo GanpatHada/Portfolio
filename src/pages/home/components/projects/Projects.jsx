@@ -1,9 +1,9 @@
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import "./Projects.css";
-import projects from "../../../../Projects.json";
-import { FiGithub } from "react-icons/fi";
-import { HiOutlineExternalLink } from "react-icons/hi";
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import './Projects.css';
+import projects from '../../../../Projects.json';
+import { FiGithub } from 'react-icons/fi';
+import { HiOutlineExternalLink } from 'react-icons/hi';
 
 const ProjectCard = ({
   project: { title, description, github, live, tags },

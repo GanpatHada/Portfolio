@@ -35,6 +35,6 @@ Here is my live portfolio:
 
 ## 🛠️ Built With
 
-- **Frontend**: React.js  
-- **Deployment**: Vercel  
+- **Frontend**: React.js
+- **Deployment**: Vercel
 - **Version Control**: Git & GitHub

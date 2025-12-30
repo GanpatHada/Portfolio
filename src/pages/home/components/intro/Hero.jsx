@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { toast } from "react-toastify";
-import { FaRegCircleCheck, FaRegCopy } from "react-icons/fa6";
-import "./Hero.css";
+import { useState } from 'react';
+import { toast } from 'react-toastify';
+import { FaRegCircleCheck, FaRegCopy } from 'react-icons/fa6';
+import './Hero.css';
 
 const OpenToWork = () => {
   return (
@@ -14,25 +14,21 @@ const OpenToWork = () => {
 
 const LinkedInButton = () => {
   return (
-      <a
-        target="_blank"
-        href="https://www.linkedin.com/in/ganpathada/"
-        id="linkedin-button"
-      >
-        Linkedin
-      </a>
+    <a
+      target="_blank"
+      href="https://www.linkedin.com/in/ganpathada/"
+      id="linkedin-button"
+    >
+      Linkedin
+    </a>
   );
 };
 
 const GithubButton = () => {
   return (
-      <a
-        target="_blank"
-        href="https://github.com/GanpatHada"
-        id="github-button"
-      >
-        Github
-      </a>
+    <a target="_blank" href="https://github.com/GanpatHada" id="github-button">
+      Github
+    </a>
   );
 };
 
@@ -40,18 +36,18 @@ const NpxButton = () => {
   const [isCopied, setIsCopied] = useState(false);
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText("npx ganpat_hada");
+      await navigator.clipboard.writeText('npx ganpat_hada');
       setIsCopied(true);
       setTimeout(() => {
         setIsCopied(false);
       }, 5000);
     } catch (err) {
-      toast.error("Failed to copy!");
+      toast.error('Failed to copy!');
     }
   };
   return (
-    <button id="npx-button"  onClick={handleCopy}>
-      npx ganpat_hada{" "}
+    <button id="npx-button" onClick={handleCopy}>
+      npx ganpat_hada{' '}
       <span>{isCopied ? <FaRegCircleCheck /> : <FaRegCopy />}</span>
     </button>
   );
@@ -65,8 +61,8 @@ const Intro = () => {
       </p>
       <p id="long-intro">
         With hands-on experience in the MERN stack, I craft seamless user
-        experiences and efficient server-side solutions. Open to learning
-        new technologies and tackling challenging projects.
+        experiences and efficient server-side solutions. Open to learning new
+        technologies and tackling challenging projects.
       </p>
     </section>
   );

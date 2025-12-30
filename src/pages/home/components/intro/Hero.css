@@ -1,11 +1,10 @@
-section#hero{
+section#hero {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   max-width: 768px;
   margin: 2rem auto;
   text-align: center;
-  
 }
 #open-to-work {
   margin: auto;
@@ -18,7 +17,6 @@ section#hero{
   gap: 1rem;
   position: relative;
   box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.137);
-  
 }
 #open-to-work #green-light {
   display: flex;
@@ -48,7 +46,6 @@ section#hero{
   color: var(--primary-text);
   font-weight: 500;
   line-height: 1.1;
-  ;
 }
 #short-intro span {
   color: var(--theme-color);
@@ -58,7 +55,6 @@ section#hero{
   font-size: 1.1rem;
   letter-spacing: 0.6px;
   text-wrap: pretty;
-  
 }
 @keyframes light-animation {
   0% {
@@ -67,7 +63,8 @@ section#hero{
 
   100% {
     background-color: rgb(94, 255, 31);
-    box-shadow: rgba(145, 255, 0, 0.596) 0px 0px 10px 4px,
+    box-shadow:
+      rgba(145, 255, 0, 0.596) 0px 0px 10px 4px,
       rgba(145, 255, 0, 0.596) 0px 0px 10px 4px;
   }
 }
@@ -78,7 +75,9 @@ section#hero{
   justify-content: center;
   gap: 1rem;
 }
-.hero-actions button, .hero-actions a {
+.hero-actions button,
+.hero-actions a {
+  justify-content: center;
   display: flex;
   align-items: center;
   padding: 10px 20px;
@@ -100,8 +99,8 @@ section#hero{
   background-color: transparent;
   border: 1px solid #80808080;
   color: var(--primary-text);
-  &:hover{
-    background-color:#8080801a ;
+  &:hover {
+    background-color: #8080801a;
   }
 }
 
@@ -114,17 +113,16 @@ section#hero{
 }
 
 @media screen and (max-width: 540px) {
-  #intro{
+  #intro {
     text-align: left;
   }
-  .hero-actions{
+  .hero-actions {
     grid-template-columns: repeat(2, 1fr);
   }
-  .hero-actions button{
+  .hero-actions button {
     width: 100%;
-    
   }
-  #npx-button{
+  #npx-button {
     grid-column: span 2;
   }
 }

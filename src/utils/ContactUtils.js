@@ -1,14 +1,11 @@
-import validator from "validator";
+import validator from 'validator';
 
-const initialMessage=
-    {
-        clientName:'',
-        clientEmail:'',
-        clientNumber:'',
-        clientMessageText:'',
-      }
-
-
+const initialMessage = {
+  clientName: '',
+  clientEmail: '',
+  clientNumber: '',
+  clientMessageText: '',
+};
 
 function checkEmptyFields(message) {
   const { clientName, clientEmail, clientMessageText } = message;
@@ -25,4 +22,4 @@ function checkValidEmail(clientEmail) {
   return false;
 }
 
-export { checkEmptyFields, checkValidEmail,initialMessage };
+export { checkEmptyFields, checkValidEmail, initialMessage };

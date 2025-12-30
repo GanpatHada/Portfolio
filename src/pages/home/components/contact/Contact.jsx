@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import "./Contact.css";
-import { toast } from "react-toastify";
-import { sendMessage } from "../../../../services/ContactService";
+import React, { useState } from 'react';
+import './Contact.css';
+import { toast } from 'react-toastify';
+import { sendMessage } from '../../../../services/ContactService';
 import {
   checkEmptyFields,
-  initialMessage
-} from "../../../../utils/ContactUtils"
+  initialMessage,
+} from '../../../../utils/ContactUtils';
 import {
   FaGithub,
   FaInstagram,
   FaLinkedin,
   FaLocationDot,
   FaWhatsapp,
-} from "react-icons/fa6";
-import { FaPhoneAlt, FaTelegramPlane } from "react-icons/fa";
-import { MdLanguage } from "react-icons/md";
-import { SiGmail } from "react-icons/si";
+} from 'react-icons/fa6';
+import { FaPhoneAlt, FaTelegramPlane } from 'react-icons/fa';
+import { MdLanguage } from 'react-icons/md';
+import { SiGmail } from 'react-icons/si';
 
 const ContactForm = () => {
   const [message, setMessage] = useState({ ...initialMessage });
@@ -28,17 +28,17 @@ const ContactForm = () => {
   };
 
   const handleSendMessage = async () => {
-    let areFieldsEmpty = checkEmptyFields (message);
-    if (areFieldsEmpty) return toast.warning("required* fields are mandatory");
+    let areFieldsEmpty = checkEmptyFields(message);
+    if (areFieldsEmpty) return toast.warning('required* fields are mandatory');
     let emailVerified = checkValidEmail(message.clientEmail);
-    if (!emailVerified) return toast.warning("Invalid email");
+    if (!emailVerified) return toast.warning('Invalid email');
     try {
       setLoading(true);
       await sendMessage(message);
-      toast.success("Message sent successfuly");
+      toast.success('Message sent successfuly');
       setMessage({ ...initialMessage });
     } catch (error) {
-      toast.error("Something went wrong!");
+      toast.error('Something went wrong!');
     } finally {
       setLoading(false);
     }
@@ -89,7 +89,7 @@ const ContactForm = () => {
         id="send-message-button"
         onClick={handleSendMessage}
       >
-        {loading ? "Sending Message ..." : "Send Message"}
+        {loading ? 'Sending Message ...' : 'Send Message'}
       </button>
     </section>
   );
@@ -215,11 +215,9 @@ const ContactInfo = () => {
 
 const Contact = () => {
   return (
-    <section id="contact" >
+    <section id="contact">
       <header>
-        <h1>
-          Contact
-        </h1>
+        <h1>Contact</h1>
       </header>
       <main id="contact-content">
         <ContactDisclaimer />

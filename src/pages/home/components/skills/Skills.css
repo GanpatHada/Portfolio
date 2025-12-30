@@ -121,9 +121,8 @@
   transition: 0.5s ease-out;
   gap: 1rem;
   filter: grayscale(1);
-  
 }
-.skill-box:hover{
+.skill-box:hover {
   filter: none;
   transition: none;
   background-color: rgba(0, 255, 0, 0.137);
@@ -140,7 +139,6 @@
   height: 100%;
   width: 100%;
   object-fit: contain;
-  
 }
 .skill-box .info-section {
   display: flex;
@@ -163,7 +161,7 @@
   #skills-content #expanded-skills {
     grid-template-columns: repeat(2, 1fr);
   }
-  #skills-content #info-section{
+  #skills-content #info-section {
     display: none;
   }
 }
@@ -172,6 +170,4 @@
   #skills-content #expanded-skills {
     grid-template-columns: repeat(1, 1fr);
   }
-  
-  
 }

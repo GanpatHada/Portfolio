@@ -1,11 +1,11 @@
-import React from "react";
-import "./Footer.css";
-import { FaSpotify } from "react-icons/fa6";
-import { IoIosInformationCircleOutline } from "react-icons/io";
-import { GrTechnology } from "react-icons/gr";
-import { GoProjectSymlink } from "react-icons/go";
-import { MdOutlineContactSupport } from "react-icons/md";
-import { HashLink } from "react-router-hash-link";
+import React from 'react';
+import './Footer.css';
+import { FaSpotify } from 'react-icons/fa6';
+import { IoIosInformationCircleOutline } from 'react-icons/io';
+import { GrTechnology } from 'react-icons/gr';
+import { GoProjectSymlink } from 'react-icons/go';
+import { MdOutlineContactSupport } from 'react-icons/md';
+import { HashLink } from 'react-router-hash-link';
 
 const Footer = () => {
   return (

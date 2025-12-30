@@ -1,12 +1,10 @@
-import React from "react";
-import "./About.css";
+import React from 'react';
+import './About.css';
 const About = () => {
   return (
     <section id="about">
       <header>
-        <h1>
-          About
-        </h1>
+        <h1>About</h1>
       </header>
       <main id="about-content">
         I'm a dedicated software developer with a strong foundation in

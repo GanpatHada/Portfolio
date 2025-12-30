@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import "./Skills.css";
-import { skillsList } from "../../../../utils/SkillsUtils";
-import { IoContract, IoExpand } from "react-icons/io5";
+import React, { useState } from 'react';
+import './Skills.css';
+import { skillsList } from '../../../../utils/SkillsUtils';
+import { IoContract, IoExpand } from 'react-icons/io5';
 
 const SkillDetails = ({ skill }) => {
   return (
@@ -16,7 +16,11 @@ const SkillDetails = ({ skill }) => {
   );
 };
 
-const SkillBox = ({ skill: { name, description, image }, setSkill ,expended }) => {
+const SkillBox = ({
+  skill: { name, description, image },
+  setSkill,
+  expended,
+}) => {
   return (
     <div
       onMouseEnter={() => !expended && setSkill({ name, description })}
@@ -26,10 +30,12 @@ const SkillBox = ({ skill: { name, description, image }, setSkill ,expended }) =
       <section className="image-section">
         <img src={image} alt="" />
       </section>
-      {expended && <section className="info-section">
-        <h4>{name}</h4>
-        <p>{description}</p>
-      </section>}
+      {expended && (
+        <section className="info-section">
+          <h4>{name}</h4>
+          <p>{description}</p>
+        </section>
+      )}
     </div>
   );
 };
@@ -37,7 +43,7 @@ const SkillBox = ({ skill: { name, description, image }, setSkill ,expended }) =
 const SkillGroup = ({ setSkill }) => {
   return (
     <div className="group">
-      {skillsList.map((skill,index) => (
+      {skillsList.map((skill, index) => (
         <SkillBox key={index} skill={skill} setSkill={setSkill} />
       ))}
     </div>
@@ -65,19 +71,22 @@ const ContractedSkills = ({ skill, setSkill }) => {
 const ExpandedSkills = () => {
   return (
     <div id="expanded-skills">
-      {skillsList.map((skill,index) => {
-        return <SkillBox key={index} skill={skill} expended/>;
+      {skillsList.map((skill, index) => {
+        return <SkillBox key={index} skill={skill} expended />;
       })}
     </div>
   );
 };
 
-const SkillHeader = ({expended,setExpended}) => {
+const SkillHeader = ({ expended, setExpended }) => {
   return (
     <header>
       <h1>Technologies ,I work with</h1>
-      <button title={expended?'minimize':'maximize'} onClick={()=>setExpended(!expended)}>
-      {expended?<IoContract />:<IoExpand />}
+      <button
+        title={expended ? 'minimize' : 'maximize'}
+        onClick={() => setExpended(!expended)}
+      >
+        {expended ? <IoContract /> : <IoExpand />}
       </button>
     </header>
   );
@@ -85,17 +94,19 @@ const SkillHeader = ({expended,setExpended}) => {
 
 const Skills = () => {
   const [skill, setSkill] = useState(null);
-  const [expended,setExpended]=useState(false)
+  const [expended, setExpended] = useState(false);
   return (
     <section id="skills">
       <header>
-        <h1>
-          Skills
-        </h1>
+        <h1>Skills</h1>
       </header>
       <main id="skills-content">
         <SkillHeader expended={expended} setExpended={setExpended} />
-        {expended ? <ExpandedSkills />:<ContractedSkills skill={skill} setSkill={setSkill} />}
+        {expended ? (
+          <ExpandedSkills />
+        ) : (
+          <ContractedSkills skill={skill} setSkill={setSkill} />
+        )}
       </main>
     </section>
   );

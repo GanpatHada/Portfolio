@@ -1,9 +1,9 @@
-import "./Home.css";
-import About from "./components/about/About";
-import Hero from "./components/intro/Hero";
-import Skills from "./components/skills/Skills";
-import Projects from "./components/projects/Projects";
-import Contact from "./components/contact/Contact";
+import './Home.css';
+import About from './components/about/About';
+import Hero from './components/intro/Hero';
+import Skills from './components/skills/Skills';
+import Projects from './components/projects/Projects';
+import Contact from './components/contact/Contact';
 
 const Home = () => {
   return (

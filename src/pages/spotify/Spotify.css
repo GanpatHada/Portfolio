@@ -68,7 +68,9 @@
   margin-bottom: 1rem;
   border-radius: 10px;
   border: 1px solid rgba(128, 128, 128, 0.2);
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .track-card:hover .track-actions .play-btn {
@@ -154,7 +156,9 @@
   margin-bottom: 12px;
   border-radius: 10px;
   border: 1px solid rgba(128, 128, 128, 0.2);
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .artist-image {

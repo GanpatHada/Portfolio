@@ -1,7 +1,7 @@
-import "./Header.css";
-import mainLogo from "../../assets/G-logo.png";
-import { FiDownload } from "react-icons/fi";
-import { FaEye, FaSpotify } from "react-icons/fa";
+import './Header.css';
+import mainLogo from '../../assets/G-logo.png';
+import { FiDownload } from 'react-icons/fi';
+import { FaEye, FaSpotify } from 'react-icons/fa';
 
 const Navs = () => {
   return (
@@ -24,8 +24,6 @@ const Navs = () => {
             Projects
           </a>
         </li>
-
-        
 
         <li>
           <a href="/#contact" className="nav-item all-centered">

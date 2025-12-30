@@ -1,12 +1,12 @@
-import "./App.css";
-import Alert from "./components/alert/Alert";
-import { useEffect, useState } from "react";
-import "aos/dist/aos.css";
-import Home from "./pages/home/Home";
-import { Route, Routes } from "react-router-dom";
-import Spotify from "./pages/spotify/Spotify";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
+import './App.css';
+import Alert from './components/alert/Alert';
+import { useEffect, useState } from 'react';
+import 'aos/dist/aos.css';
+import Home from './pages/home/Home';
+import { Route, Routes } from 'react-router-dom';
+import Spotify from './pages/spotify/Spotify';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 
 const ProgressBar = ({ progress }) => {
   return (
@@ -32,9 +32,9 @@ const App = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 

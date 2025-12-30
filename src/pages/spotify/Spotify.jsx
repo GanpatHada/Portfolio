@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import "./Spotify.css";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { FaPause, FaPlay } from "react-icons/fa";
+import { useState, useEffect } from 'react';
+import './Spotify.css';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { FaPause, FaPlay } from 'react-icons/fa';
 
 const Loading = ({ num = 1 }) => (
   <div className="loading-wrapper">
@@ -23,12 +23,12 @@ const NowPlaying = () => {
     const fetchNowPlaying = async () => {
       try {
         const res = await fetch(
-          "https://spotify-api-v57j.onrender.com/api/v1/spotify/currently-playing"
+          'https://spotify-api-v57j.onrender.com/api/v1/spotify/currently-playing'
         );
         const data = await res.json();
         setSong(data.success && data.data ? data.data : null);
       } catch {
-        toast.error("Failed to fetch currently playing song");
+        toast.error('Failed to fetch currently playing song');
       } finally {
         setLoading(false);
       }
@@ -39,22 +39,22 @@ const NowPlaying = () => {
   const pauseTrack = async () => {
     try {
       const res = await fetch(
-        "https://spotify-api-v57j.onrender.com/api/v1/spotify/pause",
-        { method: "PUT" }
+        'https://spotify-api-v57j.onrender.com/api/v1/spotify/pause',
+        { method: 'PUT' }
       );
       const data = await res.json();
       if (!data.success)
-        throw new Error(data.message || "Failed to pause track");
-      toast.success("Track paused!");
+        throw new Error(data.message || 'Failed to pause track');
+      toast.success('Track paused!');
     } catch (err) {
-      toast.error(err.message || "Something went wrong while pausing");
+      toast.error(err.message || 'Something went wrong while pausing');
     }
   };
 
   const formatTime = (ms) => {
     const minutes = Math.floor(ms / 60000);
     const seconds = Math.floor((ms % 60000) / 1000);
-    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
 
   if (loading) return <Loading num={1} />;
@@ -93,7 +93,7 @@ const NowPlaying = () => {
               >
                 {artist.name}
               </a>
-              {i < song.artists.length - 1 && ", "}
+              {i < song.artists.length - 1 && ', '}
             </span>
           ))}
         </p>
@@ -111,7 +111,7 @@ const NowPlaying = () => {
 
         <div className="track-action">
           <button
-            className={song.isPlaying ? "pause-btn" : "play-btn"}
+            className={song.isPlaying ? 'pause-btn' : 'play-btn'}
             onClick={pauseTrack}
           >
             {song.isPlaying ? <FaPause /> : <FaPlay />}
@@ -142,13 +142,13 @@ const TopTracks = () => {
     const fetchTopTracks = async () => {
       try {
         const res = await fetch(
-          "https://spotify-api-v57j.onrender.com/api/v1/spotify/top-tracks"
+          'https://spotify-api-v57j.onrender.com/api/v1/spotify/top-tracks'
         );
         const data = await res.json();
         if (data.success) setTopTracks(data.data);
-        else toast.error(data.message || "Failed to load top tracks");
+        else toast.error(data.message || 'Failed to load top tracks');
       } catch {
-        toast.error("Failed to fetch top tracks");
+        toast.error('Failed to fetch top tracks');
       } finally {
         setLoading(false);
       }
@@ -162,21 +162,21 @@ const TopTracks = () => {
         `https://spotify-api-v57j.onrender.com/api/v1/spotify/play?uri=${encodeURIComponent(
           uri
         )}`,
-        { method: "PUT" }
+        { method: 'PUT' }
       );
       const data = await res.json();
       if (!data.success)
-        throw new Error(data.message || "Failed to play track");
-      toast.success("Track is now playing!");
+        throw new Error(data.message || 'Failed to play track');
+      toast.success('Track is now playing!');
     } catch (err) {
-      toast.error(err.message || "Something went wrong while playing");
+      toast.error(err.message || 'Something went wrong while playing');
     }
   };
 
   const formatDuration = (ms) => {
     const minutes = Math.floor(ms / 60000);
     const seconds = Math.floor((ms % 60000) / 1000);
-    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
 
   if (loading) return <Loading num={3} />;
@@ -205,7 +205,7 @@ const TopTracks = () => {
             </h4>
 
             <p>
-              Artists:{" "}
+              Artists:{' '}
               {track.artists.map((artist, i) => (
                 <a
                   key={artist.id}
@@ -215,13 +215,13 @@ const TopTracks = () => {
                   className="artist-link"
                 >
                   {artist.name}
-                  {i < track.artists.length - 1 && ", "}
+                  {i < track.artists.length - 1 && ', '}
                 </a>
               ))}
             </p>
 
             <p>
-              Album:{" "}
+              Album:{' '}
               <a
                 href={track.album.externalURL}
                 target="_blank"
@@ -255,13 +255,13 @@ const Artists = () => {
     const fetchArtists = async () => {
       try {
         const res = await fetch(
-          "https://spotify-api-v57j.onrender.com/api/v1/spotify/followed-artists"
+          'https://spotify-api-v57j.onrender.com/api/v1/spotify/followed-artists'
         );
         const data = await res.json();
         if (data.success) setArtists(data.data);
-        else toast.error(data.message || "Failed to load followed artists");
+        else toast.error(data.message || 'Failed to load followed artists');
       } catch {
-        toast.error("Failed to fetch followed artists");
+        toast.error('Failed to fetch followed artists');
       } finally {
         setLoading(false);
       }
@@ -296,7 +296,7 @@ const Artists = () => {
                 </a>
               </h4>
               <span className="followers">
-                {artist.followers.toLocaleString()} followers |{" "}
+                {artist.followers.toLocaleString()} followers |{' '}
                 {artist.popularity}% Popularity
               </span>
             </div>
@@ -313,7 +313,7 @@ const Artists = () => {
 };
 
 const Spotify = () => {
-  const [activeTab, setActiveTab] = useState("artists");
+  const [activeTab, setActiveTab] = useState('artists');
 
   return (
     <div className="spotify-container">
@@ -324,21 +324,21 @@ const Spotify = () => {
       <nav>
         <div className="spotify-tabs">
           <button
-            className={`tab-button ${activeTab === "artists" ? "active" : ""}`}
-            onClick={() => setActiveTab("artists")}
+            className={`tab-button ${activeTab === 'artists' ? 'active' : ''}`}
+            onClick={() => setActiveTab('artists')}
           >
             Followed Artists
           </button>
           <button
-            className={`tab-button ${activeTab === "tracks" ? "active" : ""}`}
-            onClick={() => setActiveTab("tracks")}
+            className={`tab-button ${activeTab === 'tracks' ? 'active' : ''}`}
+            onClick={() => setActiveTab('tracks')}
           >
             Top Tracks
           </button>
         </div>
       </nav>
       <main className="tab-content">
-        {activeTab === "artists" ? <Artists /> : <TopTracks />}
+        {activeTab === 'artists' ? <Artists /> : <TopTracks />}
       </main>
     </div>
   );
