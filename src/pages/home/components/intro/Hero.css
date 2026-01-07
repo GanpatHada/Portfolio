@@ -53,7 +53,7 @@ section#hero {
 }
 #long-intro {
   color: var(--secondary-text);
-  font-size: 0.35em;
+  font-size: 0.3em;
   letter-spacing: 0.6px;
   text-wrap: pretty;
 }
